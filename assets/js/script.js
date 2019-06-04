@@ -7,9 +7,11 @@ $(document).ready(function(){
 
 	$("#pageImage").mouseenter(function(){
 		$("#pageImage").attr("title","Global Status of Commercialized Biotech");
+		$(".mainGraph").attr("title","Global Status");
 	});
 	$("#pageImage").mouseleave(function() {
   		$("#pageImage").removeAttr('title');
+  		$(".mainGraph").removeAttr('title');
 	});
 
 		/*Begin page */
@@ -88,7 +90,7 @@ $(document).ready(function(){
    	$('#direction_text').on('focus', function(Event) {
 		console.log('direction_text');
  		setTimeout(function(){
-			$('#head_ing').addClass('tab_index').attr('tabindex','0');
+			$('.mainGraph').addClass('tab_index').attr('tabindex','0');
 		},10)
 			if ($("#direction_text").is(":focus") && back_tab==true) {
 				setTimeout(function(){
@@ -194,7 +196,7 @@ function set_tab(){
 		$('.tab_index,.text_container').removeClass('tab_index').removeAttr('tabindex');
 		$('#focus_reader').addClass('tab_index');
 		$('#direction_text').addClass('tab_index');
-		
+		$('#head_ing').addClass('tab_index').attr('tabindex','0');
 		for(i=0; i<=3; i++){
 			$('#lab'+i).addClass('tab_index');
 			$('#check_'+i).addClass('tab_index');
