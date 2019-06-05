@@ -139,7 +139,7 @@ $(document).ready(function(){
 		goBeginPage();
 	});
 	
-	$('.checkbox1').on("click keyup",fnClickCheckBox);
+	$('.checkbox1').on("click",fnClickCheckBox);
 })
 
 /*Activity start here*/
@@ -158,10 +158,10 @@ function goBeginPage(){
 }
 
 var fnClickCheckBox = function(ev){
-	if(ev.type=="keyup" && ev.keyCode !=13){
+/* 	if(ev.type=="keyup" && ev.keyCode !=13){
         console.log(ev.keyCode)
         return  true;
-    }
+    } */
 	id = $(this).attr('id');
 	indexId = id.substr(id.indexOf("_") + 1);
 	console.log(indexId);
