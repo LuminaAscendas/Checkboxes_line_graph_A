@@ -7,7 +7,7 @@ $(document).ready(function(){
 
 	$("#pageImage").mouseenter(function(){
 		$("#pageImage").attr("title","Global Status of Commercialized Biotech");
-		$(".mainGraph").attr("title","Global Status");
+		$(".mainGraph").attr("title","Global Status of Commercialized Biotech");
 	});
 	$("#pageImage").mouseleave(function() {
   		$("#pageImage").removeAttr('title');
