@@ -7,13 +7,18 @@ $(document).ready(function(){
 
 	$("#pageImage").mouseenter(function(){
 		$("#pageImage").attr("title","Global Status of Commercialized Biotech");
+		
+	});
+	$(".mainGraph").mouseenter(function(){
 		$(".mainGraph").attr("title","Global Status of Commercialized Biotech");
 	});
+	
 	$("#pageImage").mouseleave(function() {
   		$("#pageImage").removeAttr('title');
-  		$(".mainGraph").removeAttr('title');
+  	});
+	$(".mainGraph").mouseleave(function() {
+   		$(".mainGraph").removeAttr('title');
 	});
-
 		/*Begin page */
 	
 	$('#begin_btn').off('click').on('click',function(){
