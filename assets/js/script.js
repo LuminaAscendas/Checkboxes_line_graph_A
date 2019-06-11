@@ -178,7 +178,7 @@ var fnClickCheckBox = function(ev){
 	
 		$(this).addClass("clicked");
 		$('#check_'+indexId).attr("aria-checked", "true");
-		$('.graph_'+indexId).css('display','block');		
+		$('.graph_'+indexId).css('display','block');
 	}	
 }
 /*On rezize function*/
