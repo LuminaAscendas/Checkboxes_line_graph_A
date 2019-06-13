@@ -119,9 +119,15 @@ $(document).ready(function(){
 		var numberOfCheck=3;
 		
 		var lableTextArr=['Total','Developed countries','Developing countries'];
-		
-		for(i=0; i<numberOfCheck; i++){
-			divElem+='<div class="item" role="none"><div  role="none" class="colorbox '+colourArr[i]+'"></div><span class="labelText" id="lab'+(i+1)+'" role="none">'+lableTextArr[i]+'</span><span role="checkbox" aria-labelledby="lab'+(i+1)+'" id="check_'+(i+1)+'" class="checkbox1" aria-checked="false"></span></div>' 	
+		//aria-labelledby="lab'+(i+1)+'"
+		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+			for(i=0; i<numberOfCheck; i++){
+				divElem+='<div class="item" role="none"><div  role="none" class="colorbox '+colourArr[i]+'"></div><span class="labelText" id="lab'+(i+1)+'" role="none">'+lableTextArr[i]+'</span><span role="checkbox"  id="check_'+(i+1)+'" class="checkbox1" aria-checked="false" aria-label="'+checkBoxText[i]+'"></span></div>' 	
+			}
+		}else{
+			for(i=0; i<numberOfCheck; i++){
+				divElem+='<div class="item" role="none"><div  role="none" class="colorbox '+colourArr[i]+'"></div><span class="labelText" id="lab'+(i+1)+'" role="none">'+lableTextArr[i]+'</span><span role="checkbox" aria-labelledby="lab'+(i+1)+'" id="check_'+(i+1)+'" class="checkbox1" aria-checked="false" aria-label="'+checkBoxText[i]+'" title="'+checkBoxText[i]+'"></span></div>' 	
+			}
 		}
 		$('.activityContainer').html(divElem);
 	
@@ -146,14 +152,14 @@ $(document).ready(function(){
 	
 	$('.checkbox1').on("click",fnClickCheckBox);
 	
-	$(".checkbox1").mouseenter(function(){
+ 	$(".checkbox1").mouseenter(function(){
   		$(".checkbox1").removeAttr('title');
 	});
 	$(".checkbox1").mouseleave(function() {
 		for(i=0; i<numberOfCheck; i++){
 			$(".checkbox1").attr("title", checkBoxText[i]);
 		}
-	});
+	}); 
 	
 })
 
@@ -184,13 +190,13 @@ var fnClickCheckBox = function(ev){
 		$(this).removeClass("clicked");
 		$('#check_'+indexId).attr("aria-checked", "false");
 		$('.graph_'+indexId).css('display','none');
-		$('#check_'+indexId).removeAttr('title');
+		//$('#check_'+indexId).removeAttr('title');
 	}else{
 	
 		$(this).addClass("clicked");
 		$('#check_'+indexId).attr("aria-checked", "true");
 		$('.graph_'+indexId).css('display','block');
-		$('#check_'+indexId).attr('title', checkBoxText[indexId-1]);
+		//$('#check_'+indexId).attr('title', checkBoxText[indexId-1]);
 	}	
 }
 /*On rezize function*/
