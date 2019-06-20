@@ -115,7 +115,7 @@ $(document).ready(function(){
 	
 	/*Creating the check box codding*/	
 		var colourArr=['red', 'green', 'blue', 'orange']
-		var divElem='<div class="header" id="head_ing" role="group">World GM crop production</div>';
+		var divElem='<div class="header" id="head_ing" role="group">World GM Crop Production</div>';
 		var numberOfCheck=3;
 		
 		var lableTextArr=['Total','Developed countries','Developing countries'];
