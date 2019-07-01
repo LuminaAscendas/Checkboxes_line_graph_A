@@ -89,9 +89,10 @@ body {
     left: 389px;
 }
 #responsive_container{
-	width:666px;
+	width:688px;
 	position:relative;
 	top:35px;
+	margin:auto;
 	height:600px;
 /* 	opacity:0; */
 /* 	border:1px solid green; */
@@ -137,7 +138,7 @@ body {
 }
 
 #whole_container{
-	width: 666px;
+	width: 768px;
 	height: 725px;
 	/* border:1px solid violet; */
 	position: absolute;

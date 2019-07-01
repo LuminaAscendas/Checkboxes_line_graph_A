@@ -32,7 +32,7 @@ function resizeApp(){
 			$('body').css('height',(bodyheight)+'px');
 			$('body').css('background-size','100% '+(bodyheight)+'px');
 			$('#whole_container').css('height',($("#begin_page").height()*scale));
-			$('#whole_container').css('width',$("#begin_page").width()*scale-0.01);
+//			$('#whole_container').css('width',$("#begin_page").width()*scale-0.01);
 		
 }else{
 		cont = document.getElementById('responsive_container');
@@ -67,7 +67,7 @@ function resizeApp(){
 			$('body').css('background-size','100% '+(bodyheight)+'px');
 			//document.getElementById('whole_container').style.left = ((winWidth - appWidth )/2)+'px';
 			$('#whole_container').css('height',($("#responsive_container").height()*scale)+$("#text_container").height());
-			$('#whole_container').css('width',$("#responsive_container").width()*scale);
+//			$('#whole_container').css('width',$("#responsive_container").width()*scale);
 	
 	
 	
